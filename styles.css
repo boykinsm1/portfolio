@@ -1,0 +1,102 @@
+/* Start of styles.css */
+
+/* CSS Reset */
+/* Resets default margin and padding for common elements to create a more consistent layout across browsers. */
+body, h1, h2, h3, p, ul, li, nav {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Header Styling */
+/* Styles for the header and navigation bar, including background color and text color. */
+header {
+    background-color: #001f3f;    
+}
+
+nav ul {
+    list-style-type: none; /* Removes default list styling */
+    display: flex; /* Makes the navigation items display in a row */
+    justify-content: space-around; /* Evenly distributes space around items */
+    padding: 1em 0; /* Vertical padding for the nav bar */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* White text for visibility against the dark background */
+}
+
+/* About Section Styling */
+/* Centers text and adds padding for the About section. */
+#about {
+    text-align: center; 
+    padding: 2em; 
+}
+
+#about img {
+    width: 150px; /* Sets a fixed width for profile image */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+/* Skills Section Styling */
+/* Flexbox layout for skills section, allowing responsive alignment of skill items. */
+#skills {
+    display: flex; /* Creates a flex container */
+    justify-content: space-around; /* Distributes space evenly */
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if needed */
+    padding: 2em; 
+}
+
+.skill {
+    flex: 1; /* Allows flex items to grow and shrink equally */
+    min-width: 150px; /* Minimum width for each skill block */
+    margin: 1em; /* Adds margin between skill blocks */
+    text-align: center; /* Center-aligns text within skill blocks */
+    background: #eee; /* Light background color for skills */
+    padding: 1em; /* Padding for interior spacing */
+    border-radius: 8px; /* Rounded corners for skill blocks */
+}
+
+/* Projects Section Styling */
+/* Flexbox layout for the projects section with individual project styling. */
+#projects {
+    display: flex; 
+    justify-content: space-evenly; 
+}
+
+#projects .project {
+    margin: 1em; /* Space around each project */
+    padding: 1em; /* Padding for interior spacing */
+    border: 1px solid #ddd; /* Light border around each project */
+    border-radius: 8px; /* Rounded corners for project cards */
+}
+
+#projects img {
+    width: 100%; /* Makes images responsive to container width */
+    max-width: 150px; /* Limits the maximum width of images */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; 
+    
+}
+
+/* Contact Section Styling */
+/* Styles for the contact section, including background color and padding. */
+#contact {
+    background: #f3f3f3; /* Light gray background */
+    padding: 2em; /* Padding for spacing */
+    text-align: center; /* Center-aligns text */
+    
+}
+
+/* Responsive Design */
+/* Media query for responsiveness on smaller screens. */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stacks navigation items vertically on smaller screens */
+        align-items: center; /* Centers items horizontally */
+    }
+
+    .skill {
+        flex-basis: 100%; 
+    }
+}
