@@ -62,6 +62,7 @@ nav a {
 #projects {
     display: flex; 
     justify-content: space-evenly; 
+
 }
 
 #projects .project {
@@ -72,9 +73,9 @@ nav a {
 }
 
 #projects img {
-    width: 100%; /* Makes images responsive to container width */
-    max-width: 150px; /* Limits the maximum width of images */
-    height: auto; /* Maintains aspect ratio */
+    width: 100%; 
+    max-width: 150px; 
+    height: auto; 
     border-radius: 8px; 
     
 }
@@ -92,11 +93,18 @@ nav a {
 /* Media query for responsiveness on smaller screens. */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stacks navigation items vertically on smaller screens */
-        align-items: center; /* Centers items horizontally */
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    #projects {
+        flex-direction: column !important; /* Force it to be column */
+        align-items: center !important; 
+        flex-wrap: wrap !important; /* Ensure items wrap if needed */
     }
 
     .skill {
         flex-basis: 100%; 
     }
 }
+
