@@ -60,25 +60,27 @@ nav a {
 /* Projects Section Styling */
 /* Flexbox layout for the projects section with individual project styling. */
 #projects {
-    display: flex; 
-    justify-content: space-evenly; 
+    display: flex; /* Enable Flexbox */
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 40px; 
 
 }
 
-#projects .project {
-    margin: 1em; /* Space around each project */
-    padding: 1em; /* Padding for interior spacing */
-    border: 1px solid #ddd; /* Light border around each project */
-    border-radius: 8px; /* Rounded corners for project cards */
+.project {
+    flex: 1 1 30%; /* Allow items to grow/shrink and have a base width of 30% */
+    margin: 10px; /* Add margin around each project */
+    text-align: center; /* Center text and images */
+    box-sizing: border-box; /* Ensure padding/margin don't affect width */
 }
 
-#projects img {
-    width: 100%; 
-    max-width: 150px; 
-    height: auto; 
-    border-radius: 8px; 
-    
+.project img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
 }
+
+
 
 /* Contact Section Styling */
 /* Styles for the contact section, including background color and padding. */
@@ -86,7 +88,7 @@ nav a {
     background: #f3f3f3; /* Light gray background */
     padding: 2em; /* Padding for spacing */
     text-align: center; /* Center-aligns text */
-    
+    margin-top: 40px; 
 }
 
 /* Responsive Design */
@@ -98,13 +100,12 @@ nav a {
     }
     
     #projects {
-        flex-direction: column !important; /* Force it to be column */
-        align-items: center !important; 
-        flex-wrap: wrap !important; /* Ensure items wrap if needed */
-    }
+        display: flex; /* Use Flexbox */
+        flex-direction: column; /* Default, but explicitly stated */
+        align-items: center;
 
-    .skill {
-        flex-basis: 100%; 
     }
 }
+
+
 
